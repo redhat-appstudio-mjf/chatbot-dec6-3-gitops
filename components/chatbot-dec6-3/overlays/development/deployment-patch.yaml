@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: chatbot-dec6-3
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/redhat-ai-dev/ai-template-bootstrap-app:latest # use pre-built to bootstrap 
-        name: app-inference 
+        - image: quay.io/maysunfaisal/chatbot-dec6-3:057c7cabd4409439f1ee15c46744766248841e9d@sha256:7cbb115ab85cc89bba9750b5bf60b8ff6aab1a49fe4a63981622794d4baaf9c1 # use pre-built to bootstrap 
+          name: app-inference
