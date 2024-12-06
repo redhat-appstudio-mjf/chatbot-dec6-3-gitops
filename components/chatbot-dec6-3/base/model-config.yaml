@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: chatbot-dec6-3-model-config
+data:
+  MODEL_ENDPOINT: "http://modelserver-dec6-1-model-server.modelserver-dec6-1:8001"
+  MODEL_NAME: "ibm-granite/granite-3.0-8b-instruct"
